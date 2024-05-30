@@ -1,0 +1,15 @@
+/* Styles for circular profile icon */
+.profile-icon {
+    width: 40px; /* Adjust the size as needed */
+    height: 40px; /* Adjust the size as needed */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff; /* You can change the border color */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow */
+}
+
+.profile-icon img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

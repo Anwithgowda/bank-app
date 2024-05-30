@@ -1,0 +1,48 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Movie Detail Page</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Movie Detail Page</h1>
+	</header>
+	<main>
+		<section id="movie-info">
+			<h2>Article 370</h2>
+			<img src="movie-poster.jpg" alt="Movie poster for Article 370">
+			<p>Director: John Doe</p>
+			<p>Cast: Jane Smith, John Doe, Jim Brown</p>
+			<p>Release Date: February 29, 2024</p>
+			<p>Runtime: 2 hours 30 minutes</p>
+			<p>Genre: Drama, Action, Romance</p>
+			<p>Synopsis: A thrilling and emotional story about the power of love and the fight for justice.</p>
+		</section>
+		<section id="showtimes">
+			<h3>Showtimes:</h3>
+			<ul>
+				<li>12:00 PM</li>
+				<li>2:30 PM</li>
+				<li>5:00 PM</li>
+				<li>7:30 PM</li>
+				<li>10:00 PM</li>
+			</ul>
+		</section>
+		<section id="book-ticket">
+			<h3>Book Your Ticket Now!</h3>
+			<form>
+				<label for="num-tickets">Number of Tickets:</label>
+				<input type="number" id="num-tickets" name="num-tickets" min="1" max="10">
+				<button type="submit">Book Now</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<p>&copy;  All Rights Reserved.</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,40 @@
+package com.jsp.movieapp.service.imp;
+
+import java.util.List;
+
+import com.jsp.movieapp.entity.Ticket;
+import com.jsp.movieapp.service.TicketService;
+
+public class TicketServiceImplementation implements TicketService {
+
+	@Override
+	public Ticket saveTicket(Ticket ticket) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ticket findTicketById(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Ticket UpdateTicket(Ticket ticket) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteTicket(Ticket ticket) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Ticket> findAllTicket() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

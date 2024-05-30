@@ -1,0 +1,5 @@
+package com.jsp.movieapp.dao.imp;
+
+public class TheaterDaoImplentation {
+
+}

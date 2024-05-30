@@ -1,0 +1,40 @@
+package com.jsp.movieapp.service.imp;
+
+import java.util.List;
+
+import com.jsp.movieapp.entity.Seat;
+import com.jsp.movieapp.service.SeatService;
+
+public class SeatServiceImplementation implements SeatService {
+
+	@Override
+	public Seat saveSeat(Seat seat) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Seat findSeatById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Seat UpdateSeat(Seat seat) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteSeat(Seat seat) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Seat> findAllSeat() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,15 @@
+package com.jsp.movieapp.service;
+
+import org.springframework.stereotype.Service;
+
+import com.jsp.movieapp.entity.User;
+@Service
+public interface UserService {
+
+	public User saveUser(User user);
+	public User findUserById(int id);
+	public User login(String userId,String password);
+	
+		
+	
+}

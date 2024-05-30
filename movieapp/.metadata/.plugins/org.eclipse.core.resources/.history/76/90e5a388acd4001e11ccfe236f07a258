@@ -1,0 +1,23 @@
+package com.jsp.movieapp.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.jsp.movieapp.entity.Movie;
+
+
+@Repository
+public interface MovieDao {
+
+	public Movie saveUser(Movie Movie);
+
+	public Movie findUserById(int id);
+
+	public Movie UpdateMovie(Movie Movie);
+
+	public void deleteMovie(Movie Movie);
+
+	public List<Movie> findAllMovie();
+
+}

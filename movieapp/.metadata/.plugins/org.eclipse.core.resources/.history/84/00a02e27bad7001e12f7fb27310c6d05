@@ -1,0 +1,70 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Booking Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <form action="saveshow" method="post">
+
+            <!-- Show Time Dropdown -->
+            <div class="form-group">
+                <label for="showTime">Show Time:</label>
+                <select class="form-control" id="showTime" name="showTime">
+                    <option value="7-10">7:00 AM - 10:00 AM</option>
+                    <option value="10-1">10:00 AM - 1:00 PM</option>
+                    <option value="1-4">1:00 PM - 4:00 PM</option>
+                    <option value="4-7">4:00 PM - 7:00 PM</option>
+                    <option value="7-10">7:00 PM - 10:00 PM</option>
+                </select>
+            </div>
+
+            <!-- Show Date Input -->
+            <div class="form-group">
+                <label for="showDate">Show Date:</label>
+                <input type="date" class="form-control" id="showDate" name="showDate" required>
+            </div>
+
+            <!-- Number of Seats Input -->
+            <div class="form-group">
+                <label for="numberOfSeats">Number of Seats:</label>
+                <input type="number" class="form-control" id="numberOfSeats" name="numberOfSeats" required>
+            </div>
+
+            <!-- Theater Dropdown (Assuming theaters is a List<String> attribute in the model) -->
+            <div class="form-group">
+                <label for="theater">Theater:</label>
+                <select class="form-control" id="theater" name="theater">
+                    <c:forEach var="theater" items="${theaters}">
+                        <option value="${theater}">${theater}</option>
+                    </c:forEach>
+                </select>
+            </div>
+
+            <!-- Movie Dropdown (Assuming movies is a List<String> attribute in the model) -->
+            <div class="form-group">
+                <label for="movie">Movie:</label>
+                <select class="form-control" id="movie" name="movie">
+                    <c:forEach var="movie" items="${movies}">
+                        <option value="${movie}">${movie}</option>
+                    </c:forEach>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

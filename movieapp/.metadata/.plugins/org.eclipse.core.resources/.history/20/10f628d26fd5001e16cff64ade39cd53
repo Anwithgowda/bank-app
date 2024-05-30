@@ -1,0 +1,40 @@
+package com.jsp.movieapp.service.imp;
+
+import java.util.List;
+
+import com.jsp.movieapp.entity.Theater;
+import com.jsp.movieapp.service.TheaterService;
+
+public class TheaterServiceImplentation implements TheaterService {
+
+	@Override
+	public Theater saveTheater(Theater theater) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Theater findTheaterById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Theater UpdateTheater(Theater theater) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteTheater(Theater theater) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Theater> findAllTheater() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

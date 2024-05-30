@@ -1,0 +1,46 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="java.util.List" %>
+<%@ page import="your.package.Seat" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <!-- Include your CSS and JavaScript libraries if needed -->
+</head>
+<body>
+    <h2>Payment Details</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Seat Number</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="seat" items="${seats}">
+                <tr>
+                    <td>${seat.seatNumber}</td>
+                    <td>${seat.price}</td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+
+    <p>Total Amount: ${totalAmount}</p>
+
+    <!-- Add your QR code image here -->
+    <img src="path/to/your/qr/code/image" alt="QR Code">
+
+    <form action="/confirmPayment" method="post">
+        <!-- Add any additional payment information or form fields here -->
+        <input type="submit" value="Pay">
+    </form>
+
+    <!-- Include your JavaScript code for any additional functionality if needed -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+package com.jsp.movieapp.service.imp;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.jsp.movieapp.dao.ShowDao;
+import com.jsp.movieapp.entity.Show;
+import com.jsp.movieapp.entity.Theater;
+import com.jsp.movieapp.service.ShowService;
+import com.jsp.movieapp.service.TheaterService;
+import com.jsp.movieapp.service.exception.InvalidShowIdException;
+import com.jsp.movieapp.service.exception.NoShowFoundException;
+
+public class ShowServiceImplementation implements ShowService {
+
+	@Autowired
+	ShowDao showDao;
+	@Autowired
+	EntityManager entityManager;
+	
+	@Autowired
+	TheaterService theaterService;
+	
+	@Override
+	public Show saveShow(Show show,long theater_id) {
+		
+	Theater theater=	theaterService.findTheaterById(theater_id);
+		show.setTheater(theater);
+		List<Show> shows=new ArrayList<Show>();
+		for(int i=0;i<50;i++) {
+			Seat seat=new Seat();
+			show.setSeat(seat);
+		}
+		return showDao.saveShow(show) ;
+	}
+
+	@Override
+	public Show findShowById(long id) throws InvalidShowIdException {
+		
+		Show show = showDao.findShowById(id);
+		if (show!= null) {
+			return show;
+		}
+		throw new InvalidShowIdException("there is no show with this id");
+	}
+
+	@Override
+	public Show UpdateShow(Show show) {
+		
+		return showDao.UpdateShow(show);
+	}
+
+	@Override
+	public void deleteShow(Show show) {
+		
+		showDao.deleteShow(show);
+		
+	}
+
+	@Override
+	public List<Show> findAllShow() throws NoShowFoundException{
+		List<Show> shows = showDao.findAllShow();
+		if (shows !=null) {
+			return shows ;
+		}
+		throw new NoShowFoundException("there is no show avilable");
+	}
+
+}

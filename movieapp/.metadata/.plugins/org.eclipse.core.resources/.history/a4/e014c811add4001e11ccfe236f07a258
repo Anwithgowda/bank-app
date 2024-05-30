@@ -1,0 +1,15 @@
+package com.jsp.movieapp.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.jsp.movieapp.entity.User;
+
+@Repository
+public interface UserDao{
+
+	public User saveUser(User user);
+	public User findUserById(int id);
+	User login(String userId,String password);
+	User login(long phone,String password);
+ 
+}

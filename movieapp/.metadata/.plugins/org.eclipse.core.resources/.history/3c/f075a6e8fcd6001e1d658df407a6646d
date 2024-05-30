@@ -1,0 +1,22 @@
+package com.jsp.movieapp.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.jsp.movieapp.entity.Ticket;
+
+@Service
+public interface TicketService {
+
+	public Ticket saveTicket(Ticket ticket);
+
+	public Ticket findTicketById(int id);
+
+	public Ticket UpdateTicket(Ticket ticket);
+
+	public void deleteTicket(Ticket ticket);
+
+	public List<Ticket> findAllTicket();
+
+}

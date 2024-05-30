@@ -1,0 +1,23 @@
+package com.jsp.movieapp.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.jsp.movieapp.entity.Theater;
+
+
+@Repository
+public interface TheaterDao {
+
+	public Theater saveUser(Theater Theater);
+
+	public Theater findUserById(int id);
+
+	public Theater UpdateTheater(Theater Theater);
+
+	public void deleteTheater(Theater Theater);
+
+	public List<Theater> findAllTheater();
+
+}

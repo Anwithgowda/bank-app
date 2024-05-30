@@ -1,0 +1,7 @@
+package com.jsp.movieapp.dao.imp;
+
+import com.jsp.movieapp.dao.SeatDao;
+
+public class SeatDaoImplementation implements SeatDao{
+
+}

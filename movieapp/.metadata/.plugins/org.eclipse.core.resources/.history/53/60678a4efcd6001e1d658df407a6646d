@@ -1,0 +1,9 @@
+package com.jsp.movieapp.service.exception;
+
+public class SeatNotFoundException extends Exception {
+
+	public SeatNotFoundException(String string) {
+		
+	}
+
+}

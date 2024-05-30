@@ -1,0 +1,9 @@
+package com.jsp.movieapp.service.exception;
+
+public class InvalidSeatIdException extends Exception {
+
+	public InvalidSeatIdException(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+}

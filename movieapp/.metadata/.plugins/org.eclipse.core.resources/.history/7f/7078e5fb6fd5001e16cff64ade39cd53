@@ -1,0 +1,5 @@
+package com.jsp.movieapp.service.exception;
+
+public class InvalidTheater {
+
+}

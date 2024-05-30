@@ -1,0 +1,23 @@
+package com.jsp.movieapp.dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import com.jsp.movieapp.entity.Seat;
+
+
+@Repository
+public interface SeatDao {
+
+	public Seat saveUser(Seat Seat);
+
+	public Seat findUserById(int id);
+
+	public Seat UpdateSeat(Seat Seat);
+
+	public void deleteSeat(Seat Seat);
+
+	public List<Seat> findAllSeat();
+
+}
